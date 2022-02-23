@@ -15,8 +15,8 @@ export const makeServer = () => {
 
     factories: {
       user: Factory.extend({
-        name(i: number) {
-          return `User ${i + 1}`
+        name() {
+          return faker.name.findName()
         },
         email() {
           return faker.internet.email().toLowerCase()
